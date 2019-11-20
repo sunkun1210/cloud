@@ -10,12 +10,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class AnnotationProxyApplicationTests {
 
-//    @Autowired
-//    private BizService bizService2;
-//
-//    @Test
-//    public void contextLoads() {
-//        bizService.getName("pepsi");
-//    }
+    @Autowired
+    private BizService bizService;
+
+    @Test
+    public void contextLoads() {
+        bizService.getName("pepsi");
+    }
 
 }
