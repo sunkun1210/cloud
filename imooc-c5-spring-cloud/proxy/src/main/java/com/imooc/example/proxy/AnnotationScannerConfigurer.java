@@ -36,7 +36,7 @@ public class AnnotationScannerConfigurer implements ApplicationContextAware, Bea
         AnnotationScanner annotationScanner = new AnnotationScanner(registry);
         annotationScanner.setResourceLoader(applicationContext);
         // "com.pepsi.annotationproxy.service"是我 接口所在的包
-        annotationScanner.scan("com.pepsi.annotationproxy.service");
+        annotationScanner.scan("com.imooc.example.proxy");
 
     }
 }

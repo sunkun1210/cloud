@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class InterfaceProxy implements InvocationHandler {
 
 
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    public String invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("ObjectProxy execute:" + method.getName());
         String methodName = method.getName();
         String param = Arrays.toString(args);

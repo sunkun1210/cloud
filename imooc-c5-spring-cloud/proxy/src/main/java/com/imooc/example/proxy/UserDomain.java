@@ -1,7 +1,6 @@
 package com.imooc.example.proxy;
 
 public class UserDomain {
-
     private String name;
 
     public String getName() {
