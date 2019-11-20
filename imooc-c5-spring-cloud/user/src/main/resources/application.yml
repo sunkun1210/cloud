@@ -1,10 +1,11 @@
 server:
-  port: 8081
+  port: 8081 #端口号
 spring:
   application:
-    name: user
+    name: user #服务名称
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://imooc:111111@localhost:8761/eureka/
+      #其中defaultZone是指定eureka服务器的地址，无论是注册还是发现服务都需要这个地址
+      defaultZone: http://username:password@localhost:8761/eureka/
