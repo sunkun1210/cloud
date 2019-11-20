@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
  * Created by mavlarn on 2018/2/14.
  */
-@FeignClient(value = "order", path = "/api/order")
+
+@FeignClient(value = "order")
 public interface OrderClient extends IOrderService {
 
-    @GetMapping("/{id}")
+    @GetMapping("/api/order/{id}")
     OrderDTO getMyOrder(@PathVariable(name = "id") Long id);
 
     @PostMapping("")
