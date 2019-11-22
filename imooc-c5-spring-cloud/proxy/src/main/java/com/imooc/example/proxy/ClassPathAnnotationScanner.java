@@ -8,6 +8,9 @@ import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 
 import java.util.Set;
 
+/***
+ *    b、扫描指定的路径，接口定义
+ */
 public class ClassPathAnnotationScanner extends ClassPathBeanDefinitionScanner {
 
     public ClassPathAnnotationScanner(BeanDefinitionRegistry registry) {
