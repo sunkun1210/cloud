@@ -33,10 +33,10 @@ public class AnnotationScannerConfigurer implements ApplicationContextAware, Bea
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         LOGGER.info("postProcessBeanDefinitionRegistry() beanDefinitionName=====>"+registry.getBeanDefinitionNames().toString());
         // 需要被代理的接口
-        AnnotationScanner annotationScanner = new AnnotationScanner(registry);
+        ClassPathAnnotationScanner annotationScanner = new ClassPathAnnotationScanner(registry);
         annotationScanner.setResourceLoader(applicationContext);
         // "com.pepsi.annotationproxy.service"是我 接口所在的包
-        annotationScanner.scan("com.imooc.example.proxy");
+        annotationScanner.scan("com.imooc.example.proxy.service");
 
     }
 }

@@ -1,5 +1,6 @@
 package com.imooc.example.proxy;
 
+import com.imooc.example.proxy.service.BizService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,8 @@ public class AnnotationProxyApplicationTests {
 
     @Test
     public void contextLoads() {
-        bizService.getName("pepsi");
+        String str = bizService.getName("pepsi");
+        System.out.println("success："+str);
     }
 
 }

@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
 
 /***
- * 通过新建beanDefinition直接注册上去。通过autowire直接就可以获取。
+ * 通过新建beanDefinition直接注册上去（Service的代理）。通过autowire直接就可以获取。
  * spring是不是非常强大!!!!我也是最近才渐渐明白为什么spring可以作为一个基础框架和其他框架无缝连接。
  * 其中mybatis等第三方集成到spring都是通过FactoryBean、
  */

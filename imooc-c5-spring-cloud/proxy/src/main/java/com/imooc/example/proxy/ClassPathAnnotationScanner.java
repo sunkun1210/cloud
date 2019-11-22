@@ -8,9 +8,9 @@ import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 
 import java.util.Set;
 
-public class AnnotationScanner extends ClassPathBeanDefinitionScanner {
+public class ClassPathAnnotationScanner extends ClassPathBeanDefinitionScanner {
 
-    public AnnotationScanner(BeanDefinitionRegistry registry) {
+    public ClassPathAnnotationScanner(BeanDefinitionRegistry registry) {
         super(registry);
     }
     @Override
