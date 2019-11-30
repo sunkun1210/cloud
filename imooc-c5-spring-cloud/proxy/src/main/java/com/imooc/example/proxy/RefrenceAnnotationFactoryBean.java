@@ -1,7 +1,12 @@
 package com.imooc.example.proxy;
 
+import com.imooc.example.proxy.service.BizService;
 import org.springframework.beans.factory.FactoryBean;
 
+/***
+ * c、通过FactoryBean实现接口代理
+ * @param <T>
+ */
 public class RefrenceAnnotationFactoryBean<T> implements FactoryBean<T> {
 
     public RefrenceAnnotationFactoryBean(){}
