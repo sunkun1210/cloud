@@ -9,5 +9,15 @@ public class ClassLoaderChecker {
         System.out.println(c.getClassLoader().getParent().getParent());
         //System.out.println(c.getClassLoader().getParent().getParent().getParent());
         c.newInstance();
+
+        String s1 = new String("a");
+        s1.intern();
+        String s2="a";
+        System.out.println(s1==s2);/**  jdk1.6:false  jdk1.7:false  */
+
+        String s3=new String("a")+new String("a"); /**  jdk1.6:false  jdk1.7:true  */
+        s3.intern();
+        String s4="aa";
+        System.out.println(s3==s4);
     }
 }
