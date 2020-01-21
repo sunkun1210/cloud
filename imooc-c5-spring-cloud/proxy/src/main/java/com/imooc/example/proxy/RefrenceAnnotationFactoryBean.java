@@ -35,6 +35,6 @@ public class RefrenceAnnotationFactoryBean<T> implements FactoryBean<T> , Invoca
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("ObjectProxy execute:" + method.getName());
         String param = Arrays.toString(args);
-        return "pepsi is param="+param;
+        return "动态代理invoke方法返回值="+param;
     }
 }

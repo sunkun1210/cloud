@@ -44,15 +44,5 @@ public class AnnotationScannerConfigurer implements ApplicationContextAware, Bea
         ClassPathAnnotationScanner annotationScanner = new ClassPathAnnotationScanner(registry);
         annotationScanner.setResourceLoader(applicationContext);
         annotationScanner.scan("com.imooc.example.proxy.service");
-
-        //使用不同beanDefinition
-        Class<?> cls = UserDomain.class;
-        BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(cls);
-        GenericBeanDefinition definition = (GenericBeanDefinition) builder.getRawBeanDefinition();
-        definition.setAutowireMode(GenericBeanDefinition.AUTOWIRE_BY_TYPE);
-        definition.getPropertyValues().add("name","pepsi02");
-        // 注册bean名,一般为类名首字母小写
-        registry.registerBeanDefinition("userDomain", definition);
-
     }
 }
