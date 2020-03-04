@@ -11,9 +11,9 @@ import java.util.Set;
 /***
  *    b、扫描指定的路径，接口定义
  */
-public class ClassPathAnnotationScanner extends ClassPathBeanDefinitionScanner {
+public class MyClassPathBeanDefinitionScanner extends ClassPathBeanDefinitionScanner {
 
-    public ClassPathAnnotationScanner(BeanDefinitionRegistry registry) {
+    public MyClassPathBeanDefinitionScanner(BeanDefinitionRegistry registry) {
         super(registry);
     }
     @Override

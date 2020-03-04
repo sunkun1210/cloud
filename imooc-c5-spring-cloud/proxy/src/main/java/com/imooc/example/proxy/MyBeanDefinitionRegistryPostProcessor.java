@@ -20,11 +20,11 @@ import org.springframework.stereotype.Component;
  *  * 其中mybatis等第三方集成到spring都是通过FactoryBean、
  */
 @Component
-public class AnnotationScannerConfigurer implements ApplicationContextAware, BeanDefinitionRegistryPostProcessor {
+public class MyBeanDefinitionRegistryPostProcessor implements ApplicationContextAware, BeanDefinitionRegistryPostProcessor {
 
     private ApplicationContext applicationContext;
 
-    private Logger LOGGER = LoggerFactory.getLogger(AnnotationScannerConfigurer.class);
+    private Logger LOGGER = LoggerFactory.getLogger(MyBeanDefinitionRegistryPostProcessor.class);
 
 
     @Override
@@ -41,7 +41,7 @@ public class AnnotationScannerConfigurer implements ApplicationContextAware, Bea
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         LOGGER.info("postProcessBeanDefinitionRegistry() beanDefinitionName=====>"+registry.getBeanDefinitionNames().toString());
         // 需要被代理的接口
-        ClassPathAnnotationScanner annotationScanner = new ClassPathAnnotationScanner(registry);
+        MyClassPathBeanDefinitionScanner annotationScanner = new MyClassPathBeanDefinitionScanner(registry);
         annotationScanner.setResourceLoader(applicationContext);
         annotationScanner.scan("com.imooc.example.proxy.service");
     }
