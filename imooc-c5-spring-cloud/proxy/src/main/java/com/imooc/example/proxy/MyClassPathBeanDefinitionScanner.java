@@ -29,7 +29,7 @@ public class MyClassPathBeanDefinitionScanner extends ClassPathBeanDefinitionSca
             GenericBeanDefinition definition = (GenericBeanDefinition) holder.getBeanDefinition();
             //BeanFactory.getBean的方法跟进去后有一个判断是不是FactroyBean类型的。如果是从FactroyBean.getObejct获取
             //RefrenceAnnotationFactoryBean 实现了FactoryBean
-            definition.setBeanClass(RefrenceAnnotationFactoryBean.class);
+            definition.setBeanClass(ProxyFactoryBean.class);
             this.getRegistry().registerBeanDefinition(holder.getBeanName(), definition);
         }
         return beanDefinitions;

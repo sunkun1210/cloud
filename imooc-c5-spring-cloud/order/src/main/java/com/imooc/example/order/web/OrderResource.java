@@ -20,7 +20,7 @@ public class OrderResource implements IOrderService {
     @PostConstruct
     public void init() {
         Order order = new Order();
-        order.setAmount(100);
+        order.setAmount(1000);
         order.setTitle("MyOrder");
         order.setDetail("Bought a imooc course");
         orderRepository.save(order);

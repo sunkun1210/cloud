@@ -12,9 +12,9 @@ import java.util.Arrays;
  * c、通过FactoryBean实现接口代理
  * @param <T>
  */
-public class RefrenceAnnotationFactoryBean<T> implements FactoryBean<T> , InvocationHandler {
+public class ProxyFactoryBean<T> implements FactoryBean<T> , InvocationHandler {
 
-    public RefrenceAnnotationFactoryBean(){}
+    public ProxyFactoryBean(){}
     private Class serviceInterface=BizService.class;
     @Override
     public T getObject() throws Exception {
