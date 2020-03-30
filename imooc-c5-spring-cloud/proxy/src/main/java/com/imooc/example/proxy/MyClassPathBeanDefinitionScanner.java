@@ -22,6 +22,12 @@ public class MyClassPathBeanDefinitionScanner extends ClassPathBeanDefinitionSca
 //        this.addIncludeFilter(new AnnotationTypeFilter(Refrence.class));
         this.addIncludeFilter((metadataReader, metadataReaderFactory) -> true);
     }
+
+    /***
+     *
+     * @param basePackages
+     * @return BeanDefinitionHolder 封装了beanDefinition(用来描述Spring bean的对象)的数据结构
+     */
     @Override
     protected Set<BeanDefinitionHolder> doScan(String... basePackages) {
         Set<BeanDefinitionHolder> beanDefinitions = super.doScan(basePackages);

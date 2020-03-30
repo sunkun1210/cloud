@@ -37,6 +37,11 @@ public class MyBeanDefinitionRegistryPostProcessor implements ApplicationContext
         LOGGER.info("postProcessBeanFactory() beanDefinition的个数=====>"+beanFactory.getBeanDefinitionCount());
     }
 
+    /***
+     * 后置处理器进行进行拦截
+     * @param registry 一个BeanDefinition 一个注册器
+     * @throws BeansException
+     */
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         LOGGER.info("postProcessBeanDefinitionRegistry() beanDefinitionName=====>"+registry.getBeanDefinitionNames().toString());
