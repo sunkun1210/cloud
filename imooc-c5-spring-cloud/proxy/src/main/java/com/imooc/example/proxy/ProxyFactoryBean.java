@@ -15,7 +15,12 @@ import java.util.Arrays;
 public class ProxyFactoryBean<T> implements FactoryBean<T> , InvocationHandler {
 
     public ProxyFactoryBean(){}
+    private Class<T> clazz;
     private Class serviceInterface=BizService.class;
+
+    public ProxyFactoryBean(Class<T> clazz){
+        this.clazz=clazz;
+    }
     @Override
     public T getObject() throws Exception {
             return (T) Proxy.newProxyInstance(this.serviceInterface.getClassLoader(), new Class[]{this.serviceInterface}, this);
